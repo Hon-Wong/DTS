@@ -9,7 +9,7 @@ Han Wang, Weijie Wang, Jiaqi Liu, Hilde Kuehne, Nicu Sebe
 DTS supervises intermediate layers with depth-dependent class probabilities.
 For normalized depth $t$, it sets a target logit margin
 
-$$G(t)=G_{\max}\frac{e^{\beta t}-1}{e^\beta-1},\qquad q_t=\operatorname{softmax}(G(t)e_y).$$
+$$G(t)=G_{\max}\frac{e^{\beta t}-1}{e^\beta-1},\qquad q_t=\mathrm{softmax}(G(t)e_y).$$
 
 Early layers can remain uncertain while deeper layers receive increasingly confident targets.
 The ImageNet implementation adds auxiliary classifiers during training; exported DeiT models use only the final classifier at inference.

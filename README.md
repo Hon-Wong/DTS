@@ -14,6 +14,47 @@ $$G(t)=G_{\max}\frac{e^{\beta t}-1}{e^\beta-1},\qquad q_t=\mathrm{softmax}(G(t)e
 Early layers can remain uncertain while deeper layers receive increasingly confident targets.
 The ImageNet implementation adds auxiliary classifiers during training; exported DeiT models use only the final classifier at inference.
 
+![Layer-wise trajectories under baseline training, deep supervision, and DTS, followed by a rotating view.](assets/figure1.gif)
+
+**Figure 1.** Layer-wise trajectories of ViT-Small on CIFAR-100. Colors denote classes; height shows semantic evidence. Arrows appear as the forward pass progresses through the layers. [Static figure](assets/figure1.png).
+
+## Results
+
+The following results are reported in Tables 2–4 of the [published paper](https://raw.githubusercontent.com/mlresearch/v306/main/assets/wang26ib/wang26ib.pdf). They are the original paper results, not new benchmark runs from the release-validation tests. Accuracy is top-1 (%); gains are percentage points over the terminal-only baseline.
+
+### ImageNet-1K
+
+DTS improves all three DeiT-III model sizes while retaining the baseline inference architecture (Table 3).
+
+| Model | Resolution | Baseline | DTS | Gain |
+| --- | --- | ---: | ---: | ---: |
+| DeiT-III-T | 224 × 224 | 72.7 | **75.2** | +2.5 |
+| DeiT-III-S | 224 × 224 | 80.4 | **81.2** | +0.8 |
+| DeiT-III-B | 192 × 192 | 82.3 | **82.6** | +0.3 |
+
+### Additional datasets
+
+Final accuracy at 100% of the training schedule from Table 2. “Deep supervision” applies the same one-hot target at intermediate layers; its results are included where reported. RandAug denotes RandAugment.
+
+| Dataset | Baseline | Deep supervision | DTS | Gain |
+| --- | ---: | ---: | ---: | ---: |
+| CIFAR-10 | 82.2 | — | **83.9** | +1.7 |
+| CIFAR-100 | 54.8 | 55.9 | **57.0** | +2.2 |
+| CIFAR-100 + RandAug | 63.5 | 62.9 | **64.1** | +0.6 |
+| Tiny-ImageNet | 39.9 | — | **41.9** | +2.0 |
+| iNat19 + RandAug | 46.4 | — | **49.1** | +2.7 |
+
+### Training efficiency
+
+Table 4 reports a **3.55%** per-step training overhead for Small and **2.14%** for Base. The time to reach each accuracy threshold includes this overhead. Times below are the paper's measurements, not inference latency.
+
+| Model | Method | Time / step (ms) | Time to 60% (h) | Time to 70% (h) | Time to 80% (h) |
+| --- | --- | ---: | ---: | ---: | ---: |
+| DeiT-III-S | Baseline | 155.72 | 2.68 | 5.38 | 10.00 |
+| DeiT-III-S | DTS | 161.25 | **1.23** | **3.42** | **8.59** |
+| DeiT-III-B | Baseline | 277.33 | 2.45 | 4.81 | 12.22 |
+| DeiT-III-B | DTS | 283.27 | **2.36** | **4.48** | **12.20** |
+
 ## Included code
 
 | Directory | Contents |
@@ -85,6 +126,12 @@ Export removes optimizer state and auxiliary heads, and writes a SHA-256 manifes
 ```bash
 pip install -r requirements-dev.txt
 pytest -q
+```
+
+To rebuild the animation from the included figure coordinates:
+
+```bash
+python tools/animate_figure1.py
 ```
 
 ## Citation

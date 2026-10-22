@@ -1,0 +1,5 @@
+{
+  "recipes/imagenet_deit/samplers.py": "a3832e91c356d4aca3a181bc6b4eb6c296dedc8900a5e42799cfcb5a0e94bba0",
+  "recipes/imagenet_deit/LICENSE": "b208c52b00a2df2c8f4c3298c34407bf2bfe409968213372251c91fcc737a1a5",
+  "recipes/imagenet_convnext/LICENSE": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+}

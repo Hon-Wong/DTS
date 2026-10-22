@@ -1,0 +1,33 @@
+{
+  "entrypoint": "recipes/small_scale/main.py",
+  "source": "Paper configuration on the archived small-scale implementation; not a recovered per-run command.",
+  "arguments": [
+    "--dataset",
+    "cifar100",
+    "--data_dir",
+    "{data_path}",
+    "--strategy",
+    "exponential",
+    "--model_scale",
+    "small",
+    "--epochs",
+    "200",
+    "--batch_size",
+    "128",
+    "--lr",
+    "0.0005",
+    "--g-max",
+    "10",
+    "--beta",
+    "0.5",
+    "--lambda_max",
+    "1",
+    "--seed",
+    "0",
+    "--output_dir",
+    "{output_dir}",
+    "--weight-decay",
+    "0.05"
+  ],
+  "reference_world_size": 8
+}

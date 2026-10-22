@@ -1,0 +1,90 @@
+{
+  "archive": "ICML2026_DTS_Imagenet_Handoff_20260327.zip",
+  "files": [
+    {
+      "release_path": "recipes/small_scale/main.py",
+      "archive_path": "DTS/main.py",
+      "original_sha256": "c00331a2d33932329bdb86da6e708a1c1b0a682c6ae5600bdabd8b82f0f05f48"
+    },
+    {
+      "release_path": "recipes/imagenet_deit/main.py",
+      "archive_path": "deit_ours/main.py",
+      "original_sha256": "f98c11ce77d2732027b676275f57ed7b1560376a18ed1cbd261c9214fb5429e6"
+    },
+    {
+      "release_path": "recipes/imagenet_deit/engine.py",
+      "archive_path": "deit_ours/engine.py",
+      "original_sha256": "537a5e2221b1151f396c45c1300fe1a030792ea04249007b6af31e5b9d7227a4"
+    },
+    {
+      "release_path": "recipes/imagenet_deit/models.py",
+      "archive_path": "deit_ours/models.py",
+      "original_sha256": "48034233f5d8a97bdf739c8b197d7296d90aad2cce18bccee71fc86087d46371"
+    },
+    {
+      "release_path": "recipes/imagenet_deit/models_v2.py",
+      "archive_path": "deit_ours/models_v2.py",
+      "original_sha256": "ebb9c033414d0b568a44b8046d37c6da3526c42916f958b200d6d6809a9483ec"
+    },
+    {
+      "release_path": "recipes/imagenet_deit/losses.py",
+      "archive_path": "deit_ours/losses.py",
+      "original_sha256": "100ec97cf9fa32af2fad21a84b70828883a342fd10bc7abeacee41c3ef02b3f2"
+    },
+    {
+      "release_path": "recipes/imagenet_deit/datasets.py",
+      "archive_path": "deit_ours/datasets.py",
+      "original_sha256": "86a71891ee80ce916071c712ca499fa2cab409aeb60283ff1c8bb3cc761beb86"
+    },
+    {
+      "release_path": "recipes/imagenet_deit/augment.py",
+      "archive_path": "deit_ours/augment.py",
+      "original_sha256": "9afd48061e283a4196aa83d7fde1a6725d96bd462216b571ba1e893a00ac85aa"
+    },
+    {
+      "release_path": "recipes/imagenet_deit/utils.py",
+      "archive_path": "deit_ours/utils.py",
+      "original_sha256": "0e4b434337d89e4b9f4362e48f8c87a5613c1dcab74b56c3985851034382a538"
+    },
+    {
+      "release_path": "recipes/imagenet_convnext/main.py",
+      "archive_path": "ConvNeXt/main.py",
+      "original_sha256": "25648266687d33dcc8fa31823cee64d24288c16c6cd1834abb4118d4c2e91f4a"
+    },
+    {
+      "release_path": "recipes/imagenet_convnext/engine.py",
+      "archive_path": "ConvNeXt/engine.py",
+      "original_sha256": "f6c65d5a48ee6c6112ab66a0ef0b58c5ebe1bee7761d3e938f5bc4b5a2ce7f82"
+    },
+    {
+      "release_path": "recipes/imagenet_convnext/utils.py",
+      "archive_path": "ConvNeXt/utils.py",
+      "original_sha256": "c999677fd29d00d371dd779c81049e1bbc2aa7a4ce1d59413c022587a1297fcc"
+    },
+    {
+      "release_path": "recipes/imagenet_convnext/datasets.py",
+      "archive_path": "ConvNeXt/datasets.py",
+      "original_sha256": "6fe0cd7b3909f7fb602e86c464d2f8c047bf293bf2957f8a98b44ebb26cc9dd8"
+    },
+    {
+      "release_path": "recipes/imagenet_convnext/optim_factory.py",
+      "archive_path": "ConvNeXt/optim_factory.py",
+      "original_sha256": "5cd27b0266c14a62f7ed24c6565ec04971c45c7155bd725d8f397a6cd4592a0f"
+    },
+    {
+      "release_path": "recipes/imagenet_convnext/models/convnext.py",
+      "archive_path": "ConvNeXt/models/convnext.py",
+      "original_sha256": "f2c09b36c2373a712659f36548150fdbbd6d8567af8d80ffaf18e6a351bcaf25"
+    },
+    {
+      "release_path": "recipes/imagenet_convnext/models/convnext_dts.py",
+      "archive_path": "ConvNeXt/models/convnext_dts.py",
+      "original_sha256": "45636cd240ce4f7e369cf672028c26ed2de1fbdddd04745daa46434b2d1cecca"
+    },
+    {
+      "release_path": "recipes/probing/probe_pretrained.py",
+      "archive_path": "DTS_vis/probe_pretrained.py",
+      "original_sha256": "3fd5db13e3735d9ea21a039d2fad766c2ed5b6bbd05e680e4240b71c565df50a"
+    }
+  ]
+}

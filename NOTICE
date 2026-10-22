@@ -1,0 +1,19 @@
+Deep Trajectory Supervision (DTS)
+Copyright 2026 DTS contributors.
+
+This release contains modifications of DeiT / DeiT-III by Facebook, Inc.
+and Meta Platforms, Inc. and affiliates, licensed under Apache-2.0.
+Source: https://github.com/facebookresearch/deit
+The corresponding license is retained in recipes/imagenet_deit/LICENSE.
+
+recipes/imagenet_convnext contains code derived from ConvNeXt by Meta
+Platforms, Inc. and affiliates, licensed under MIT. Its original license
+is retained in recipes/imagenet_convnext/LICENSE and applies to that code.
+Source: https://github.com/facebookresearch/ConvNeXt
+
+DeiT model implementations also acknowledge timm (Apache-2.0):
+https://github.com/huggingface/pytorch-image-models
+
+Original copyright headers are retained. DTS-specific modifications and
+release changes are described in docs/provenance.md. Dataset and external
+pretrained-model licenses are not replaced by the code license.
